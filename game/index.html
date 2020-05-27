@@ -1,18 +1,24 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello, World! - A-Frame</title>
-    <meta name="description" content="Hello, World! - A-Frame">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="utf-8" />
+    <title>WEBVR GAME - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame" />
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-  </head>
   <body>
+
     <a-scene>
-      <a-box position="-5 .5 -4" rotation="0 90 0" width="10" color="#824f07"></a-box>
+      <a-box position="-5 0.5 -4" rotation="0 90 0" width="10" color="#824f07" scale="1 1 1"></a-box>
+      <a-box position="0 2 -9.5" rotation="0 0 0" width="10" color="#824f07" scale="1 4 1"></a-box>
+      <a-box position="0 0.5 -9.5" rotation="0 0 0" width="10" color="#824f07" scale="1 1 1"></a-box>
+      <a-box position="5 0.5 -4" rotation="0 90 0" width="10" color="#824f07" scale="1 1 1"></a-box>
+      <a-box position="0.2 2 -8.9" rotation="0 90 0" width="10" color="red" scale="0.014 0.355 0.377" clickable="onclick:changeWallColor"></a-box>
       <!-- <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#138207"></a-plane>
-      <a-sky color="#68e8dd"></a-sky>
-    </a-scene>
-  </body>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#138207" scale="1 1 1"></a-plane>
+      <a-sky color="#68e8dd" position="0 0 0" rotation="0 0 0" scale="-1 1 1" ></a-sky>
+    <!-- <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1487" height="638" style="width: 1487px; height: 638px;"></canvas> -->
+    <!-- <a-entity camera="far:10000;fov:50;near:0.05;active:true" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-entity> -->
+  </a-scene>
+
+
+</body>
 </html>
