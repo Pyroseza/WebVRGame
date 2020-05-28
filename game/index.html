@@ -3,10 +3,15 @@
     <title>WEBVR GAME - A-Frame</title>
     <meta name="description" content="Hello, World! - A-Frame" />
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+<script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
   <body>
     <script src="index.js"></script>
 
     <a-scene>
+      <a-entity movement-controls="speed: 0.15">
+        <a-entity progressive-controls></a-entity>
+      </a-entity>
       <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
       <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
       <a-entity hand-controls laser-controls raycaster="far: 20"></a-entity>
