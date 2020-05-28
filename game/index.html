@@ -7,7 +7,20 @@
     <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
   <body>
+    <script type="text/javascript">
 
+
+    AFRAME.registerComponent('color-randomizer', {
+         play: function() {
+           this.el.addEventListener('drag-drop', function(evt) {
+             evt.detail.dropped.setAttribute('material', 'color',
+               '#'+(Math.random()*0xFFFFFF<<0).toString(16))
+              // notify super-hands that the gesture was accepted
+             evt.preventDefault()
+           })
+         }
+       })
+    </script>
     <a-scene physics="debug: true" physics="gravity: 0">
       <a-entity id="rig"
             movement-controls
