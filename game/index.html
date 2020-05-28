@@ -15,12 +15,10 @@
     <a-entity camera
               position="0 1.6 0"
               look-controls="pointerLockEnabled: true">
-              <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
-              <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
             </a-entity>
+            <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: white"></a-entity>
+            <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: white"></a-entity>
   </a-entity>
-
-      <a-entity hand-controls laser-controls raycaster="far: 20"></a-entity>
 
       <a-box position="-5 0.5 -4" rotation="0 90 0" width="10" color="#824f07" scale="1 1 1"></a-box>
       <a-box id="background" position="0 2 -9.5" rotation="0 0 0" width="10" color="#824f07" scale="1 4 1"></a-box>
