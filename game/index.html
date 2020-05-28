@@ -8,7 +8,15 @@
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/components/sphere-collider.js"></script>
   <body>
-
+    <script>
+    AFRAME.registerComponent("foo", {
+    init: function() {
+    this.el.addEventListener("collisions", (e)=>{
+    	changeWallColor();
+    })
+    }
+    })
+    </script>
     <a-scene physics="debug: true" physics="gravity: 0">
       <a-entity id="rig"
             movement-controls
@@ -27,7 +35,7 @@
       <a-box static-body id="background" position="0 4 -9.5" rotation="0 0 0" width="10" color="#824f07" scale="1 4 1"></a-box>
       <a-box static-body position="0 0.5 -9.5" rotation="0 0 0" width="10" color="#824f07" scale="1 1 1"></a-box>
       <a-box static-body position="5 0.5 -4" rotation="0 90 0" width="10" color="#824f07" scale="1 1 1"></a-box>
-      <a-box static-body id="button" position="0.2 1.5 -8.9" rotation="0 90 0" width="10" color="red" scale="0.014 0.355 0.377" clickable></a-box>
+      <a-box static-body id="button" position="0.2 1.5 -8.9" rotation="0 90 0" width="10" color="red" scale="0.014 0.355 0.377" clickable foo></a-box>
 
       <a-plane static-body position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#138207" scale="1 1 1"></a-plane>
       <a-sky color="#68e8dd" position="0 0 0" rotation="0 0 0" scale="-1 1 1" ></a-sky>

@@ -3,6 +3,6 @@ $('#background').setAttribute('color', 'green');
 function changeWallColor() {
   $('#background').setAttribute('color', 'blue');
 }
-$('#button').addEventListener('collisions', function (evt) {
+$('#button').addEventListener('collisions', function (e) {
   changeWallColor();
 });
