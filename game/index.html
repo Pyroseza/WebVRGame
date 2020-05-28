@@ -9,9 +9,13 @@
     <script src="index.js"></script>
 
     <a-scene>
-      <a-entity movement-controls="speed: 0.15">
-        <a-entity progressive-controls></a-entity>
-      </a-entity>
+      <a-entity id="rig"
+            movement-controls
+            position="25 0 25">
+    <a-entity camera
+              position="0 1.6 0"
+              look-controls="pointerLockEnabled: true"></a-entity>
+  </a-entity>
       <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
       <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
       <a-entity hand-controls laser-controls raycaster="far: 20"></a-entity>
@@ -26,7 +30,7 @@
       <a-sky color="#68e8dd" position="0 0 0" rotation="0 0 0" scale="-1 1 1" ></a-sky>
     <!-- <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1487" height="638" style="width: 1487px; height: 638px;"></canvas> -->
     <!-- <a-entity camera="far:10000;fov:50;near:0.05;active:true" position="0 0 0" rotation="0 0 0" scale="1 1 1"></a-entity> -->
-    <a-camera><a-cursor></a-cursor></a-camera>
+    <!-- <a-camera><a-cursor></a-cursor></a-camera> -->
 
   </a-scene>
 
