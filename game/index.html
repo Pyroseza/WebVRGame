@@ -7,11 +7,13 @@
     <script src="index.js"></script>
 
     <a-scene class="fullscreen" canvas="" keyboard-shortcuts="enterVR:true;exitVR:true;resetSensor:true" screenshot="width:4096;height:2048" vr-mode-ui="enabled:true" auto-enter-vr="display:GearVR;enabled:true">
+      <a-entity tracked-controls="controller: 0; idPrefix: OpenVR"></a-entity>
+
       <a-box position="-5 0.5 -4" rotation="0 90 0" width="10" color="#824f07" scale="1 1 1"></a-box>
       <a-box id="background" position="0 2 -9.5" rotation="0 0 0" width="10" color="#824f07" scale="1 4 1"></a-box>
       <a-box position="0 0.5 -9.5" rotation="0 0 0" width="10" color="#824f07" scale="1 1 1"></a-box>
       <a-box position="5 0.5 -4" rotation="0 90 0" width="10" color="#824f07" scale="1 1 1"></a-box>
-      <a-box position="0.2 2 -8.9" rotation="0 90 0" width="10" color="red" scale="0.014 0.355 0.377" onlick="changeWallColor()" clickable="onclick:changeWallColor"></a-box>
+      <a-box id="button" position="0.2 2 -8.9" rotation="0 90 0" width="10" color="red" scale="0.014 0.355 0.377" clickable="onclick:changeWallColor"></a-box>
       <!-- <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
       <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#138207" scale="1 1 1"></a-plane>
