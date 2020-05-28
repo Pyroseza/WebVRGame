@@ -7,10 +7,9 @@
     <script src="index.js"></script>
 
     <a-scene>
-      <a-entity hand-controls="left"></a-entity>
-<a-entity hand-controls="right"></a-entity>
-<a-entity oculus-touch-controls="hand: left"></a-entity>
-<a-entity oculus-touch-controls="hand: right"></a-entity>
+      <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+      <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+
       <a-box position="-5 0.5 -4" rotation="0 90 0" width="10" color="#824f07" scale="1 1 1"></a-box>
       <a-box id="background" position="0 2 -9.5" rotation="0 0 0" width="10" color="#824f07" scale="1 4 1"></a-box>
       <a-box position="0 0.5 -9.5" rotation="0 0 0" width="10" color="#824f07" scale="1 1 1"></a-box>
