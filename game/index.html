@@ -11,20 +11,22 @@
     <a-scene>
       <a-entity id="rig"
             movement-controls
-            position="25 0 25">
+            position="0 0 0">
     <a-entity camera
               position="0 1.6 0"
-              look-controls="pointerLockEnabled: true"></a-entity>
+              look-controls="pointerLockEnabled: true">
+              <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+              <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+            </a-entity>
   </a-entity>
-      <a-entity id="leftHand" hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
-      <a-entity id="rightHand" hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"></a-entity>
+
       <a-entity hand-controls laser-controls raycaster="far: 20"></a-entity>
 
       <a-box position="-5 0.5 -4" rotation="0 90 0" width="10" color="#824f07" scale="1 1 1"></a-box>
       <a-box id="background" position="0 2 -9.5" rotation="0 0 0" width="10" color="#824f07" scale="1 4 1"></a-box>
       <a-box position="0 0.5 -9.5" rotation="0 0 0" width="10" color="#824f07" scale="1 1 1"></a-box>
       <a-box position="5 0.5 -4" rotation="0 90 0" width="10" color="#824f07" scale="1 1 1"></a-box>
-      <a-box id="button" position="0.2 2 -8.9" rotation="0 90 0" width="10" color="red" scale="0.014 0.355 0.377" clickable="onclick:changeWallColor"></a-box>
+      <a-box id="button" position="0.2 1.5 -8.9" rotation="0 90 0" width="10" color="red" scale="0.014 0.355 0.377" clickable="onclick:changeWallColor"></a-box>
 
       <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#138207" scale="1 1 1"></a-plane>
       <a-sky color="#68e8dd" position="0 0 0" rotation="0 0 0" scale="-1 1 1" ></a-sky>
